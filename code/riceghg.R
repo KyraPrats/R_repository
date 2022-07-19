@@ -26,7 +26,8 @@ library(PRISMA2020)
 library(usethis)
 
 use_git_config(user.name = "KyraPrats", user.email = "kyraprats@gmail.com")
-
+usethis::create_github_token()
+gitcreds::gitcreds_set()
 
 ##### Playing with PRISMA #####
 prisma <- read.table(file = "PRISMA.csv", sep = ",")
