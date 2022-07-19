@@ -1,7 +1,7 @@
 ##### Rice GHG Manuscript code #####
 ### Prepared by Jyoti Shankar and Kyra Prats ###
 ### Indigo Ag ###
-### Updated 6/28/2022 ###
+### Updated 7/18/2022 ###
 
 ### Set working directory ###
 
