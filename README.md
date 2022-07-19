@@ -1,3 +1,3 @@
 # R_repository
 
-### Making more changes from R Studio 
+### Making more changes from R Studio and updating the code
