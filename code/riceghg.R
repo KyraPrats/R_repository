@@ -13,6 +13,8 @@ install.packages("dplyr")
 install.packages("cowplot")
 install.packages("revtools")
 install.packages("forcats")
+install.packages("PRISMA2020")
+install.packages("usethis")
 
 ### Loading relevant packages
 library(ggplot2)
@@ -20,6 +22,17 @@ library(dplyr)
 library(cowplot)
 library(revtools)
 library(forcats)
+library(PRISMA2020)
+library(usethis)
+
+use_git_config(user.name = "KyraPrats", user.email = "kyraprats@gmail.com")
+
+
+##### Playing with PRISMA #####
+prisma <- read.table(file = "PRISMA.csv", sep = ",")
+PRISMA_flowdiagram(prisma)
+
+
 
 
 ##### Figure 1 #####
