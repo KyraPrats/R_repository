@@ -115,8 +115,8 @@ p2 <-
   labs(x = "Location",
        y = "Seasonal CH4 emissions in kg ha-1") +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
-        panel.background = element_blank(), axis.text.x = element_text(size = 8),
-        axis.text.y = element_text(size = 8),
+        panel.background = element_blank(), axis.text.x = element_text(size = 10),
+        axis.text.y = element_text(size = 10),
         axis.line = element_line(colour = "black"))
 p2
 
