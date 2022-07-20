@@ -95,3 +95,29 @@ Figure1
 ggsave(Figure1, plot = Figure1, device = "pdf", scale = 1,
        width = 8, height = 11.5, units = c("in"), dpi = 600, limitsize = TRUE)
 
+
+##### Figure 2 - exploration #####
+
+rice_data <- read.table(file = "RiceData.csv", header = TRUE, sep = ",")
+
+str(rice_data)
+rice_data$irrigation_practice <- as.factor(rice_data$irrigation_practice)
+rice_data$soil_type <- as.factor(rice_data$soil_type)
+
+# Super rough, there's a lot of cleaning to do and making sure that the emissions are 
+# comparable (e.g., some of the seasonal emissions were reported as maximums, most others
+# as means)
+# Color by irrigation practice
+p2 <-
+  ggplot(rice_data, 
+         aes(x = location, y = CH4_seasonal_sameunit)) +
+  geom_point(aes(x = location, y = CH4_seasonal_sameunit, color = irrigation_practice)) +
+  labs(x = "Location",
+       y = "Seasonal CH4 emissions in kg ha-1") +
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
+        panel.background = element_blank(), axis.text.x = element_text(size = 8),
+        axis.text.y = element_text(size = 8),
+        axis.line = element_line(colour = "black"))
+p2
+
+
